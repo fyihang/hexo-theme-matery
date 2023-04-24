@@ -1,6 +1,6 @@
 # hexo-theme-matery
 
-[![HitCount](http://hits.dwyl.io/fyihang/hexo-theme-matery.svg)](http://hits.dwyl.io/fyihang/hexo-theme-matery) [![Gitter](https://img.shields.io/gitter/room/fyihang/hexo-theme-matery.svg)](https://gitter.im/hexo-theme-matery/Lobby?utm_source=badge) [![GitHub issues](https://img.shields.io/github/issues/fyihang/hexo-theme-matery.svg)](https://github.com/fyihang/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/fyihang/hexo-theme-matery.svg)](https://github.com/fyihang/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://codeload.github.com/fyihang/hexo-theme-matery/zip/master) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%205.0.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/fyihang/hexo-theme-matery.svg)](https://github.com/fyihang/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/fyihang/hexo-theme-matery.svg)](https://github.com/fyihang/hexo-theme-matery/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/fyihang/hexo-theme-matery.svg)](https://github.com/fyihang/hexo-theme-matery/issues) [![GitHub license](https://img.shields.io/github/license/fyihang/hexo-theme-matery.svg)](https://github.com/fyihang/hexo-theme-matery/blob/master/LICENSE) [![Download](https://img.shields.io/badge/downloads-develop-green.svg)](https://github.com/fyihang/hexo-theme-matery/archive/refs/tags/v3.0.0-beta1.zip) [![Hexo Version](https://img.shields.io/badge/hexo-%3E%3D%205.0.0-blue.svg)](http://hexo.io) [![GitHub forks](https://img.shields.io/github/forks/fyihang/hexo-theme-matery.svg)](https://github.com/fyihang/hexo-theme-matery/network) [![GitHub stars](https://img.shields.io/github/stars/fyihang/hexo-theme-matery.svg)](https://github.com/fyihang/hexo-theme-matery/stargazers)
 
 原作者为[`闪烁之狐`](https://github.com/blinkfox)，原仓库是 [`blinkfox
 /
@@ -45,7 +45,7 @@ hexo-theme-matery`](https://github.com/blinkfox/hexo-theme-matery)，本仓库�
 
 本主题**推荐你使用 Hexo 5.0.0 及以上的版本**。如果，你已经有一个自己的 [Hexo](https://hexo.io/zh-cn/) 博客了，建议你将 Hexo 升级到最新稳定的版本。
 
-点击 [这里](https://codeload.github.com/fyihang/hexo-theme-matery/zip/master) 下载 `master` 分支的最新稳定版的代码，解压缩后，将 `hexo-theme-matery` 的文件夹复制到你 Hexo 的 `themes` 文件夹中即可。
+点击 [这里](https://github.com/fyihang/hexo-theme-matery/archive/refs/tags/v3.0.0-beta1.zip) 下载 `master` 分支的最新稳定版的代码，解压缩后，将 `hexo-theme-matery` 的文件夹复制到你 Hexo 的 `themes` 文件夹中即可。
 
 当然你也可以在你的 `themes` 文件夹下使用 `git clone` 命令来下载:
 
@@ -619,17 +619,6 @@ tags:
 ---
 ```
 
-## 效果截图
-
-![首页](http://static.blinkfox.com/matery-20181202-1.png)
-
-![首页推荐文章](http://static.blinkfox.com/matery-20181202-2.png)
-
-![首页文章列表](http://static.blinkfox.com/matery-20181202-3.png)
-
-![首页文章列表](http://static.blinkfox.com/matery-20181202-7.png)
-
-![首页文章列表](http://static.blinkfox.com/matery-20181202-8.png)
 
 ## 自定制修改
 
@@ -684,15 +673,3 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 ```
 
 在 `/source/medias/featureimages` 文件夹中默认有 24 张特色图片，你可以再增加或者减少，并需要在 `_config.yml` 做同步修改。
-
-## 版本变更记录
-
-参见 [CHANGELOG.md](https://github.com/fyihang/hexo-theme-matery/blob/master/CHANGELOG.md)
-
-## 更多部署方式
-
-> Jsdelivr 已经被封了，这两个可以加速访问快一点
-
-### [vercel 部署](https://blog.17lai.site/posts/5311b619/#vercel-%E9%83%A8%E7%BD%B2)
-
-### [cloudflare Pages 部署](https://blog.17lai.site/posts/5311b619/#cloudflare-Pages-%E9%83%A8%E7%BD%B2)
