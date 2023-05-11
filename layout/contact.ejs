@@ -30,7 +30,6 @@
                 </div>
                 <%- page.content %>
             </div>
-            <!--valine评论弹幕-->
             <% if (theme.valine && theme.valine.enable) { %>
                 <p>
                     <b>畅所欲言</b><br>
@@ -75,7 +74,6 @@
                         do_barrager();
                         async function do_barrager() {
                             let lists = [];
-                            //查询弹幕
                             const query = new AV.Query('barrager');
                             const barrager = await query.find().then((barrager) => {
                                 lists = barrager;
@@ -101,7 +99,6 @@
                         }
                     });
 
-                    //发送弹幕
                     function  run(){
                         let info = $('input[name=info]').val();
                         (info === '' ) ?  info='hello world' : info=info;
@@ -131,7 +128,6 @@
             <% } %>
         </div>
 
-        <!--其他评论card-->
         <div class="card">
             <% if (theme.gitalk && theme.gitalk.enable) { %>
                 <%- partial('_partial/gitalk') %>

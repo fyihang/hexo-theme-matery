@@ -35,7 +35,6 @@
     let tagsChart = echarts.init(document.getElementById('tags-chart'));
 
     <%
-    /* calculate postsOption data. */
     var startDate = moment().subtract(1, 'years').startOf('month');
     var endDate = moment().endOf('month');
 
@@ -48,7 +47,6 @@
         }
     }
 
-    // post and count map.
     site.posts.forEach(function (post) {
         var month = post.date.format('YYYY-MM');
         if (monthMap.has(month)) {
@@ -56,7 +54,6 @@
         }
     });
 
-    // xAxis data and yAxis data.
     var monthArr = JSON.stringify([...monthMap.keys()]);
     var monthValueArr = JSON.stringify([...monthMap.values()]);
     %>
@@ -107,7 +104,6 @@
     };
 
     <%
-    /* calculate categoriesOption data. */
     var categoryArr = [];
     site.categories.map(function(category) {
         categoryArr.push({'name': category.name, 'value': category.length})
@@ -145,15 +141,12 @@
     };
 
     <%
-    /* calculate tagsOption data. */
-    // get all tags name and count,then order by length desc.
     var tagArr = [];
     site.tags.map(function(tag) {
         tagArr.push({'name': tag.name, 'value': tag.length});
     });
     tagArr.sort((a, b) => {return b.value - a.value});
 
-    // get Top 10 tags name and count.
     var tagNameArr = [];
     var tagCountArr = [];
     for (var i = 0, len = Math.min(tagArr.length, 10); i < len; i++) {
@@ -211,7 +204,6 @@
         ]
     };
 
-    // render the charts
     postsChart.setOption(postsOption);
     categoriesChart.setOption(categoriesOption);
     tagsChart.setOption(tagsOption);

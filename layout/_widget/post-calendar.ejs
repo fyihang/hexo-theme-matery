@@ -12,12 +12,10 @@
     var nameMap = (config.language && config.language.indexOf('zh') >= 0) ? 'cn' : 'en';
     var titleText = (config.language && config.language.indexOf('zh') >= 0) ? '文章日历' : 'Post Calendar';
 
-    // calculate range.
     var startDate = moment().subtract(1, 'years');
     var endDate = moment();
     var rangeArr = '["' + startDate.format('YYYY-MM-DD') + '", "' + endDate.format('YYYY-MM-DD') + '"]';
 
-    // post and count map.
     var dateMap = new Map();
     site.posts.forEach(function (post) {
         var date = post.date.format('YYYY-MM-DD');
@@ -25,7 +23,6 @@
         dateMap.set(date, count == null || count == undefined ? 1 : count + 1);
     });
 
-    // loop the data for the current year, generating the number of post per day
     var i = 0;
     var datePosts = '[';
     var dayTime = 3600 * 24 * 1000;

@@ -11,7 +11,8 @@
                 <span id="year"><%- theme.time.year %>-<%- new Date().getFullYear() %></span>
             <% } %>
             <a href="<%- url_for('/about') %>" target="_blank"><%- config.title %></a>
-            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            <br>
+            &nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/fyihang/hexo-theme-matery" target="_blank">Matery</a>
             <% if (theme.translate.enable) { %>
                 <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
@@ -37,9 +38,7 @@
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             <% } %>
-            <br>
 
-            <!-- 运行天数提醒. -->
             <% if (theme.time.enable) { %>
                 <span id="sitetime"> Loading ...</span>
                 <script>
@@ -68,7 +67,6 @@
                         var diffYears = Math.floor(diff / years);
                         var diffDays = Math.floor((diff / days) - diffYears * 365);
 
-                        // 区分是否有年份.
                         var language = '<%- config.language %>';
                         if (startYear === String(todayYear)) {
                             document.getElementById("year").innerHTML = todayYear;

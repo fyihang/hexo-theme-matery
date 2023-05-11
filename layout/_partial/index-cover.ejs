@@ -109,14 +109,11 @@ var coverPostsCount = coverPosts.length;
     $(function () {
         let coverSlider = $('.carousel');
 
-        //用户触摸轮播自动 restartPlay 是否生效
         let initUserPressedOrDraggedActive = false
 
-        //用户触摸轮播自动 restartPlay
         function initUserPressedOrDragged(instance) {
             setInterval(() => {
                 if (instance.pressed || instance.dragged) {
-                    // console.log('initUserPressedOrDragged: ',instance.pressed,instance.dragged)
                     restartPlay()
                 }
             }, 1000)
@@ -128,7 +125,6 @@ var coverPostsCount = coverPosts.length;
             indicators: '<%- theme.cover.showIndicators %>' === 'true',
             onCycleTo() {
                 if (!initUserPressedOrDraggedActive) {
-                    // console.log('initUserPressedOrDraggedActive')
                     initUserPressedOrDragged(this)
                     initUserPressedOrDraggedActive = true
                 }
@@ -137,7 +133,6 @@ var coverPostsCount = coverPosts.length;
 
         let carouselIntervalId;
         <% if (theme.cover.autoLoop) { %>
-        // Loop to call the next cover article picture.
         let autoCarousel = function () {
             carouselIntervalId = setInterval(function () {
                 coverSlider.carousel('next');
@@ -154,7 +149,6 @@ var coverPostsCount = coverPosts.length;
         };
 
         <% if (theme.cover.showPrevNext) { %>
-        // prev and next cover post.
         $('#prev-cover').click(function () {
             coverSlider.carousel('prev');
             restartPlay();
